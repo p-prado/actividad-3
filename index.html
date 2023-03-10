@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Weather App</title>
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <h1 class="title">Weather App</h1>
+    <div class="controls">
+        <input type="date" name="date" id="dateControl">
+        <button id="dateButton">Get Weather</button>
+        <button id="todayButton">Today's Weather</button>
+    </div>
+    <h2><span id="dateHeading"></span></h2>
+    <div id="resultsDate" class="results">
+        <p>Temperature: <span id="dayTemp">--</span>°C</p>
+        <p>Conditions: <span id="dayConditions">--</span></p>
+    </div>
+    <div id="resultsToday" class="results">
+        <div id="morning">
+            <h3>Morning:</h3>
+            <p>Temperature: <span id="morningTemp">--</span>°C</p>
+            <p>Conditions: <span id="morningConditions">----</span></p>    
+        </div>
+        <div id="afternoon">
+            <h3>Afternoon:</h3>
+            <p>Temperature: <span id="afternoonTemp">--</span>°C</p>
+            <p>Conditions: <span id="afternoonConditions">----</span></p>
+        </div>
+        <div id="night">
+            <h3>Night:</h3>
+            <p>Temperature: <span id="nightTemp">--</span>°C</p>
+            <p>Conditions: <span id="nightConditions">----</span></p>
+        </div>
+    </div>
+</body>
+
+</html>
