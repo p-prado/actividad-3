@@ -5,6 +5,7 @@ const dateControl = document.getElementById("dateControl");
 const dateButton = document.getElementById("dateButton");
 const todayButton = document.getElementById("todayButton");
 const dateHeading = document.getElementById("dateHeading");
+const todayHeading = document.getElementById("todayHeading");
 const resultsDate = document.getElementById("resultsDate");
 const resultsToday = document.getElementById("resultsToday");
 
@@ -41,7 +42,7 @@ todayButton.addEventListener("click", function () {
         month: 'long',
         day: 'numeric'
     };
-    dateHeading.innerHTML = today.toLocaleDateString("en-US", dateOptions);
+    todayHeading.innerHTML = today.toLocaleDateString("en-US", dateOptions);
     // Call to API, returns an object.
     getTodayWeather(today)
         .then(weatherData => {
@@ -71,7 +72,7 @@ async function getDateWeather(date) {
             } else {
                 reject(Error("Call to get weather data for the specified date failed because no date was selected."))
             }
-        }, 5000);
+        }, 1000);
     });
 }
 
@@ -80,7 +81,6 @@ async function getTodayWeather(date) {
     return new Promise((resolve, reject) => {
         // Random variable to simulate the success or failure of the API call.
         let isSuccessful = true;
-        // Set time limit for opperation to be 5000 ms.
         setTimeout(() => {
             if (isSuccessful) {
                 console.log(date)
@@ -102,7 +102,7 @@ async function getTodayWeather(date) {
             } else {
                 reject(Error("Call to get weather data failed."));
             }
-        }, 5000);
+        }, 1000);
     });
 }
 

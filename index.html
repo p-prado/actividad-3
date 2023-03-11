@@ -11,34 +11,52 @@
 </head>
 
 <body>
-    <h1 class="title">Weather App</h1>
-    <div class="controls">
-        <input type="date" name="date" id="dateControl">
-        <button id="dateButton">Get Weather</button>
-        <button id="todayButton">Today's Weather</button>
-    </div>
-    <h2><span id="dateHeading"></span></h2>
-    <div id="resultsDate" class="results">
-        <p>Temperature: <span id="dayTemp">--</span>°C</p>
-        <p>Conditions: <span id="dayConditions">--</span></p>
-    </div>
-    <div id="resultsToday" class="results">
-        <div id="morning">
-            <h3>Morning:</h3>
-            <p>Temperature: <span id="morningTemp">--</span>°C</p>
-            <p>Conditions: <span id="morningConditions">----</span></p>    
+    <header>
+        <div class="container">
+            <h1 class="title">Weather App</h1>
         </div>
-        <div id="afternoon">
-            <h3>Afternoon:</h3>
-            <p>Temperature: <span id="afternoonTemp">--</span>°C</p>
-            <p>Conditions: <span id="afternoonConditions">----</span></p>
+    </header>
+    <main>
+        <div class="controls-container">
+            <div class="container">
+                <input type="date" name="date" id="dateControl">
+                <button id="dateButton">Get Weather</button>
+                <button id="todayButton">Today's Weather</button>
+            </div>
         </div>
-        <div id="night">
-            <h3>Night:</h3>
-            <p>Temperature: <span id="nightTemp">--</span>°C</p>
-            <p>Conditions: <span id="nightConditions">----</span></p>
+        <div class="container">
+            <div id="resultsDate" class="results">
+                <h2><span id="dateHeading">Tuesday</span></h2>
+                <p class="temp"><span id="dayTemp">--</span>°C</p>
+                <p><span id="dayConditions">--</span></p>
+            </div>
+            <div id="resultsToday" class="results">
+                <h2><span id="todayHeading"></span></h2>
+                <div class="today-container">
+                    <div id="morning">
+                        <h3>Morning</h3>
+                        <p><span id="morningTemp" class="temp">--</span>°</p>
+                        <p><span id="morningConditions">----</span></p>
+                    </div>
+                    <div id="afternoon">
+                        <h3>Afternoon</h3>
+                        <p><span id="afternoonTemp" class="temp">--</span>°</p>
+                        <p><span id="afternoonConditions">----</span></p>
+                    </div>
+                    <div id="night">
+                        <h3>Night</h3>
+                        <p><span id="nightTemp" class="temp">--</span>°</p>
+                        <p><span id="nightConditions">----</span></p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Pablo Prado &copy; 2023</p>
+        </div>
+    </footer>
 </body>
 
 </html>
